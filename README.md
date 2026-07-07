@@ -50,10 +50,13 @@ Las imágenes **no se incluyen** en este repositorio por su tamaño. En la carpe
 
 ```
 1ACC0235-TP-TF-2026-01/
-├── code/                        # Notebooks de Google Colab
-│   ├── modelo_clasico_y_cnn.ipynb    # Modelo clásico (HSV) + CNN (MobileNetV2)
-│   └── modelo_yolo.ipynb             # Modelo YOLO11 + interfaz gráfica
-├── data/                        # Instrucciones para obtener el dataset
+├── code/                                  # Notebooks y modelos
+│   ├── modelo_clasico_y_cnn.ipynb              # Modelo clásico (HSV) + CNN (MobileNetV2)
+│   ├── modelo_yolo.ipynb                       # Modelo YOLO11 + interfaz gráfica
+│   ├── probar_modelos.ipynb                    # Notebook de prueba (sin re-entrenar)
+│   ├── modelo_platanos_cnn.keras               # Modelo CNN entrenado
+│   └── modelo_platanos_yolo.pt                 # Modelo YOLO11 entrenado
+├── data/                                  # Instrucciones para obtener el dataset
 │   └── README.md
 ├── README.md
 └── LICENSE
@@ -83,6 +86,16 @@ El modelo clásico funciona bien en clases separables por color (Verde) pero fal
 4. Ejecutar las celdas en orden.
 
 Tecnologías: Python, OpenCV, TensorFlow/Keras, Ultralytics (YOLO11), scikit-learn, ipywidgets.
+
+### Probar los modelos sin re-entrenar
+
+Para clasificar plátanos usando los modelos ya entrenados, sin necesidad de descargar el dataset ni entrenar:
+
+1. Abrir el notebook [`code/probar_modelos.ipynb`](./code/probar_modelos.ipynb) en Google Colab.
+2. (Opcional) Activar la GPU para mayor velocidad.
+3. Ejecutar todas las celdas (Entorno de ejecución → Ejecutar todas).
+
+El notebook descarga automáticamente los modelos entrenados desde este repositorio y muestra una interfaz gráfica donde se puede subir una foto de un plátano y obtener su estado de madurez junto con la recomendación logística. Incluye la opción de clasificar con YOLO11 (recomendado) o con MobileNetV2.
 
 ---
 
