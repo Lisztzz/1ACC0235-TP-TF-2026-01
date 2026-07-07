@@ -1,0 +1,29 @@
+# Credenciales (NUNCA subir)
+kaggle.json
+*.pem
+*.key
+
+# Dataset (se descarga desde Kaggle, no se versiona)
+data/banana/
+data/*.zip
+*.jpg
+*.jpeg
+*.png
+
+# Modelos entrenados pesados (opcional; descomentar si no se suben)
+# *.keras
+# *.pt
+# *.h5
+
+# Archivos temporales de Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Entornos
+venv/
+.env
